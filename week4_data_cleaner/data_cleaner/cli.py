@@ -19,7 +19,7 @@ from data_cleaner.reporter import HTMLReporter
 class DataCleanerCLI:
 
     def __init__(self):
-        self.parser = self.parse_args()
+        self.args = self.parse_args()
 
     @staticmethod
     def parse_args():
@@ -48,7 +48,7 @@ class DataCleanerCLI:
         cleaner = DataCleaner(df)
 
         cleaned_df, summary = cleaner.process(
-            remove_duplicate= self.args.remove_duplicate,
+            remove_duplicate= self.args.remove_duplicates,
             fill_missing= self.args.fill_missing
         )
 

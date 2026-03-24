@@ -63,9 +63,9 @@ class HTMLReporter(object):
             <h2>一、清洗摘要</h2>
             <ul>
                 <li>原始行数：{self.summary['original_rows']}</li>
-                <li>原始列数：{self.summary['original_cols']}</li>
-                <li>清洗后行数：{self.summary['cleaned_rows']}</li>
-                <li>清洗后列数：{self.summary['cleaned_cols']}</li>
+                <li>原始列数：{self.summary['original_columns']}</li>
+                <li>清洗后行数：{self.summary['clean_rows']}</li>
+                <li>清洗后列数：{self.summary['clean_columns']}</li>
                 <li>清洗前缺失值数量：{self.summary['missing_before']}</li>
                 <li>清洗后缺失值数量：{self.summary['missing_after']}</li>
                 <li>清洗前重复行数量：{self.summary['duplicates_before']}</li>
