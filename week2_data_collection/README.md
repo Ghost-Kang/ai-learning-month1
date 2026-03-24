@@ -20,7 +20,7 @@
 
 ## 项目结构
 
-```bash
+```text
 douban-scraper/
 ├── main.py             # 统一入口
 ├── scraper.py          # 爬虫主程序
@@ -31,6 +31,7 @@ douban-scraper/
 ├── README.md
 └── data/
     └── douban_top250.csv
+```
 
 ## 本周目标
 
