@@ -37,6 +37,8 @@ python data_cleaner.py input.csv \
 - --visualize：生成数值列图表
 - --report：生成 HTML 报告
 
+## 目录架构
+
 ``` bash
 
 week4_data_cleaner/
