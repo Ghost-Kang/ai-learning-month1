@@ -1,0 +1,38 @@
+# Python 缓存
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 虚拟环境
+venv/
+.env/
+.venv/
+
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# 日志
+*.log
+
+# 构建文件
+build/
+dist/
+*.egg-info/
+
+# 临时文件
+*.tmp
+*.bak
+
+# 原始数据（可按需忽略）
+week2_data_collection/data/raw/*.csv
+week2_data_collection/data/raw/*.xlsx
+
+# 大型导出图片（可按需忽略）
+week3_data_analysis/images/*.pdf
