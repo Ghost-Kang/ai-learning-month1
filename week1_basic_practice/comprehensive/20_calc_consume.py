@@ -2,7 +2,7 @@
 统计每个月的消费情况
 """
 
-__author__ = "wangxuknag"
+__author__ = "wangxukang"
 __date__ = "2026-03-16"
 
 from datetime import datetime
@@ -211,7 +211,7 @@ def edit_record():
         return
 
     row_id = idx -1
-    old = df.loc(row_id)
+    old = df.iloc[row_id]
 
     new_date = input(f'日期：[{old["日期"].strftime('%Y-%m-%d')}]:').strip()
     new_type = input(f'类型[{old["类型"]}]:').strip()
@@ -241,7 +241,7 @@ def edit_record():
         df.at[row_id, '备注'] = new_note
 
     save_file(df)
-    print('<UNK>\n')
+    print('编辑成功\n')
 
 
 def plot_category_bar():
@@ -323,12 +323,12 @@ def export_monthly_data():
     out_file = f"{month}_月度统计.xlsx"
 
     total = pd.DataFrame({
-        '项目': ["总收入","总支持","剩余"],
+        '项目': ["总收入","总支出","剩余"],
         "金额":[
-            month_df.loc[df["类型"] == "收入", '金额'].sum(),
-            month_df.loc[df["类型"] == "支出", '金额'].sum(),
-            month_df.loc[df["类型"] == "收入", '金额'].sum()-
-            month_df.loc[df["类型"] == "收入", '金额'].sum(),
+            month_df.loc[month_df["类型"] == "收入", '金额'].sum(),
+            month_df.loc[month_df["类型"] == "支出", '金额'].sum(),
+            month_df.loc[month_df["类型"] == "收入", '金额'].sum()-
+            month_df.loc[month_df["类型"] == "支出", '金额'].sum(),
         ]
     } )
 

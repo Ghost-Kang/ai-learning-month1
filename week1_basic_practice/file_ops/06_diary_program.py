@@ -30,7 +30,7 @@ def  write_to_content():
         if line == "exit":
             break
         lines.append(line)
-        return '\n'.join(lines)
+    return '\n'.join(lines)
 
 def write_to_diary():
     timestamp = get_timestamp()

@@ -72,7 +72,7 @@ def product_ranking(df:pd.DataFrame)->None:
           .agg(
               销售数量=("销售数量", "sum"),
               销售额=("销售额",  "sum"),
-              订单数=("销售额",  "count"),
+              订单数=("销售数量",  "count"),
           )
           .sort_values("销售数量", ascending=False)
           .reset_index(drop=True)
@@ -116,7 +116,7 @@ def monthly_report(df:pd.DataFrame)->None:
                .agg(
                     销售数量 =( "销售数量", "sum"),
                     销售额 =( "销售额", "sum"),
-                    订单数 =( "销售额", "count"),
+                    订单数 =( "销售数量", "count"),
                 )
                 .sort_values("年月")
                 .reset_index(drop=True)

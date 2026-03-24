@@ -8,7 +8,7 @@
 可以做成长期使用的小工具
 """
 
-__author__ = 'wangxuknag'
+__author__ = 'wangxukang'
 __date__ = '2026-03-16'
 
 from datetime import datetime
@@ -58,7 +58,7 @@ def show_events():
 def add_event():
 
     name = input("请输入关键日程：").strip()
-    timestamp = input("输入日期的格式 %Y-%m-%d %H:%M:%D").strip()
+    timestamp = input("输入日期的格式 %Y-%m-%d %H:%M:%S").strip()
     events[name] = timestamp
     print("事件添加成功！")
 
